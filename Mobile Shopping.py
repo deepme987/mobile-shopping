@@ -24,7 +24,7 @@ def flush():
 
 
 def send(mail):   
-    sender = "deepme987@gmail.com"
+    sender = "$EMAIL$"
     msg = '''Your order has been succesfully placed!
             Name:
             Address:
@@ -35,7 +35,7 @@ def send(mail):
             
     s = smtplib.SMTP('smtp.gmail.com')
     s.starttls()
-    s.login(sender,"deepandbhoomi")
+    s.login(sender,"$PASSWORD$")
     s.sendmail(sender,mail,msg)
     s.quit()
     '''try:
@@ -51,7 +51,7 @@ def send(mail):
 #for database
 def retrieve_row(ID):
     conn=MySQLdb.connect(host='localhost', database='abc', user='root',
-    password='Dhaval@1505')
+    	password='DB Password')
     cursor=conn.cursor()
     str="select * from mobile_data1 where ID='%d'"
     args=(ID)
@@ -285,64 +285,64 @@ canvas.pack(side="left")
 canvas.create_window((0,0),window=frame,anchor='nw')
 frame.bind("<Configure>",myfunction)
 
-x = PIL.Image.open('img1.jpg')
+x = PIL.Image.open('images/img1.jpg')
 img1 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img2.jpg')
+x = PIL.Image.open('images/img2.jpg')
 img2 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img3.jpg')
+x = PIL.Image.open('images/img3.jpg')
 img3 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img4.jpeg')
+x = PIL.Image.open('images/img4.jpeg')
 img4 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img5.jpg')
+x = PIL.Image.open('images/img5.jpg')
 img5 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img6.jpg')
+x = PIL.Image.open('images/img6.jpg')
 img6 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img7.jpg')
+x = PIL.Image.open('images/img7.jpg')
 img7 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img8.jpg')
+x = PIL.Image.open('images/img8.jpg')
 img8 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img9.jpg')
+x = PIL.Image.open('images/img9.jpg')
 img9 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img10.jpg')
+x = PIL.Image.open('images/img10.jpg')
 img10 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img11.jpg')
+x = PIL.Image.open('images/img11.jpg')
 img11 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img12.jpeg')
+x = PIL.Image.open('images/img12.jpeg')
 img12 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img13.jpeg')
+x = PIL.Image.open('images/img13.jpeg')
 img13 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img14.jpg')
+x = PIL.Image.open('images/img14.jpg')
 img14 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img15.jpg')
+x = PIL.Image.open('images/img15.jpg')
 img15 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img16.jpeg')
+x = PIL.Image.open('images/img16.jpeg')
 img16 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img17.jpg')
+x = PIL.Image.open('images/img17.jpg')
 img17 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img18.jpg')
+x = PIL.Image.open('images/img18.jpg')
 img18 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img19.jpg')
+x = PIL.Image.open('images/img19.jpg')
 img19 = PIL.ImageTk.PhotoImage(x)
 
-x = PIL.Image.open('img20.jpg')
+x = PIL.Image.open('images/img20.jpg')
 img20 = PIL.ImageTk.PhotoImage(x)
 
 data()
